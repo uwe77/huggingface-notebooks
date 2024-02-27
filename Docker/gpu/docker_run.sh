@@ -58,7 +58,7 @@ docker run \
     -v "/home/$USER/$PROJ_NAME:/home/arg/$PROJ_NAME" \
     -w "/home/arg/$PROJ_NAME" \
     --user "root:root" \
-    --name argoop4-+ \\\1
+    --name argoop \
     --network host \
     --privileged \
     --security-opt seccomp=unconfined \
