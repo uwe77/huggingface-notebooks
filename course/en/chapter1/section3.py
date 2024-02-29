@@ -40,7 +40,7 @@ if in_notebook():
     ipytest.autoconfig()
 
 # %%
-# %%ipytest -qq
+# %%ipytest -vvv
 def test_sentiment_analysis():
 
     import pytest
@@ -54,6 +54,7 @@ def test_sentiment_analysis():
     assert results[0]['score'] > 0.9
 
 # %%
+# %%ipytest -vvv
 def test_sentiment_analysis2():
 
     import pytest
@@ -72,6 +73,7 @@ def test_sentiment_analysis2():
     assert results[1]['score'] > 0.9
 
 # %%
+# %%ipytest -vvv
 def test_zero_shot_classification():
 
     from transformers import pipeline
@@ -88,6 +90,7 @@ def test_zero_shot_classification():
     assert max_index == 0
 
 # %%
+# %%ipytest -vvv
 # write a test for text generation pipeline
 def test_text_generation():
     from transformers import pipeline
@@ -99,6 +102,7 @@ def test_text_generation():
     assert len(results) == 1
 
 # %%
+# %%ipytest -vvv
 # write a test for text generation pipeline with distilgpt2
 def test_text_generation2():
     from transformers import pipeline
@@ -114,6 +118,7 @@ def test_text_generation2():
     assert len(results) == 2
 
 # %%
+# %%ipytest -vvv
 # write a test for fill mask task
 def test_fill_mask():
     from transformers import pipeline
@@ -126,6 +131,7 @@ def test_fill_mask():
     assert results[0]['score'] > 0.9
 
 # %%
+# %%ipytest -vvv
 # write a test for NER task
 def test_ner():
     from transformers import pipeline
@@ -138,6 +144,7 @@ def test_ner():
     assert results[0]['score'] > 0.9
 
 # %%
+# %%ipytest -vvv
 # write a test for question answering task
 def test_question_answering():
     from transformers import pipeline
@@ -153,6 +160,7 @@ def test_question_answering():
     assert results['score'] > 0.9
 
 # %%
+# %%ipytest -vvv
 # write a test for summarization task
 def test_summarization():
     from transformers import pipeline
@@ -185,6 +193,7 @@ def test_summarization():
     assert len(results) == 1
 
 # %%
+# %%ipytest -vvv
 # write a test for translation task
 def test_translation():
     from transformers import pipeline
